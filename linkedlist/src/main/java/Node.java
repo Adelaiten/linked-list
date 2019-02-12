@@ -12,20 +12,35 @@ public class Node<T> {
     }
 
 
+    public Node getNextNode() {
+        return this.nextNode;
+    }
+
+
+    public void setNextNode(Node<T> node) {
+        this.nextNode = node;
+    }
+
+
+    public T getValue() {
+        return this.value;
+    }
+
+
+    public void removeNextNode() {
+        if(nextNode.hasNext()) {
+            Node<T> tempNode = nextNode.getNextNode();
+            this.nextNode = tempNode;
+        }else {
+            nextNode = null;
+        }
+
+    }
+
     public boolean hasNext() {
         if(nextNode == null) {
             return false;
         }
         return true;
-    }
-
-
-    public Node getNextNode() {
-        return this.nextNode;
-    }
-
-    
-    public T getValue() {
-        return this.value;
     }
 }
