@@ -59,4 +59,27 @@ public class LinkedListTest {
         linkedList.remove(2);
         assertEquals(6, linkedList.get(2) );
     }
+
+    @Test
+
+    void checkIfInsertedOnIndex() {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(2);//0
+        linkedList.add(3);//1
+        linkedList.add(4);//2
+        linkedList.add(5); //3
+        linkedList.add(6);//4
+        linkedList.add(7);//5
+
+        linkedList.insert(3, 3);
+        linkedList.insert(4, 4);
+
+        assertAll(
+                () -> assertEquals(3, linkedList.get(3)),
+                () -> assertEquals(4, linkedList.get(4)),
+                () -> assertEquals(5, linkedList.get(5)),
+                () -> assertEquals(6,  linkedList.get(6)),
+                () -> assertEquals(7, linkedList.get(7))
+                );
+    }
 }

@@ -10,27 +10,38 @@ public class LinkedList<T> {
     }
 
     public void add(T value) {
+
+        throwExceptionWhenValueNull(value);
+
         if(this.firstNode == null) {
-            this.firstNode = new Node<T>(value);
-            this.lastNode = this.firstNode;
+            addWhenListEmpty(value);
         }else {
-            Node nextNode = new Node<T>(value);
-            this.lastNode.setNextNode(nextNode);
-            System.out.println(lastNode.getValue());
-            this.lastNode = nextNode;
+            pushNextNode(value);
         }
         this.listLength++;
     }
 
+    private void pushNextNode(T value) {
+        Node nextNode = new Node<T>(value);
+        this.lastNode.setNextNode(nextNode);
+
+        this.lastNode = nextNode;
+    }
+
+    private void addWhenListEmpty(T value) {
+        this.firstNode = new Node<T>(value);
+        this.lastNode = this.firstNode;
+    }
+
 
     public T get(int index) {
-        if(index >= listLength || index < 0) {
-            throw new IndexOutOfBoundsException();
-        }
+        throwExceptionWhenInvalidIndex(index);
+        int FIRST_INDEX = 0;
+        int LAST_INDEX = listLength - 1;
 
-        if(index == 0) {
+        if(index == FIRST_INDEX) {
             return this.firstNode.getValue();
-        }else if(index == listLength - 1) {
+        }else if(index == LAST_INDEX) {
             return this.lastNode.getValue();
         }
 
@@ -47,38 +58,88 @@ public class LinkedList<T> {
 
     }
 
-    public void remove(int index) {
-        if(index >= listLength || index < 0) { //jeszcze gdy pusta lista
-            throw new IndexOutOfBoundsException();
-        }
-        Node<T> tempNode = this.firstNode;
-        if(index == 0) {
-            tempNode = this.firstNode.getNextNode();
-            this.firstNode = tempNode;
-            listLength--;
-        }else {
-            for(int i = 0; i < listLength; i++) {
-                if(i+1 == index) {
-                    tempNode.removeNextNode();
-                    listLength--;
-                    break;
-                }
-                tempNode = tempNode.getNextNode();
-            }
-        }
 
+
+    public void remove(int index) {
+        throwExceptionWhenInvalidIndex(index);
+        int FIRST_INDEX = 0;
+        Node<T> tempNode = this.firstNode;
+
+        if(index == FIRST_INDEX) {
+            removeFirstNode();
+        }else {
+            removeNode(index, tempNode);
+        }
+        listLength--;
     }
 
-    public void insert(int index, T value) {
-        Node<T> node = new Node<>(value);
-        Node tempNode = this.firstNode;
+    private void removeNode(int index, Node<T> tempNode) {
         for(int i = 0; i < listLength; i++) {
             if(i+1 == index) {
-
+                tempNode.removeNextNode();
+                break;
             }
             tempNode = tempNode.getNextNode();
         }
     }
 
+    private void removeFirstNode() {
+        Node<T> tempNode;
+        tempNode = this.firstNode.getNextNode();
+        this.firstNode = tempNode;
+    }
+
+
+    public void insert(int index, T value) {
+        throwExceptionWhenValueNull((T) value);
+
+        Node<T> node = new Node<>(value);
+        Node tempNode = this.firstNode;
+
+        addWhenIndexHigher(index, value);
+
+        throwErrorWhenLowerThanZero(index);
+
+        insertionLoop(index, node, tempNode);
+    }
+
+    private void throwExceptionWhenValueNull(T value) {
+        if (value == null) {
+            throw new NullPointerException();
+        }
+    }
+
+    private void insertionLoop(int index, Node<T> node, Node tempNode) {
+        for(int i = 0; i < listLength; i++) {
+            if(i+1 == index) {
+                Node indexNode = tempNode.getNextNode();
+                node.setNextNode(indexNode);
+
+                tempNode.setNextNode(node);
+//                System.out.println(tempNode.getNextNode().getNextNode().getNextNode().getNextNode().getValue());
+                listLength++;
+                break;
+            }
+            tempNode = tempNode.getNextNode();
+        }
+    }
+
+    private void throwErrorWhenLowerThanZero(int index) {
+        if (index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
+    private void addWhenIndexHigher(int index, T value) {
+        if(index >= (listLength)) {
+            add(value);
+        }
+    }
+
+    private void throwExceptionWhenInvalidIndex(int index) {
+        if (index >= listLength || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
 
 }
