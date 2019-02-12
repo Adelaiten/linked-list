@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="890986e4-2ff2-43bc-980e-b3bda99548c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/LinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LinkedListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/LinkedListTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/LinkedListTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,13 +51,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3752" />
+          <entry key="java" value="4277" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3752" />
+          <entry key="JAVA" value="4277" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -90,20 +86,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/LinkedListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+            <state relative-caret-position="345">
+              <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,8 +149,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/NodeTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Node.java" />
-        <option value="$PROJECT_DIR$/src/test/java/LinkedListTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/test/java/LinkedListTest.java" />
       </list>
     </option>
   </component>
@@ -226,7 +225,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549965829361" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549966817372" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Codecool-web-module/test/java-se-filepartreader-testing-with-junit-Adelaiten/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -246,7 +245,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.LinkedListTest">
+  <component name="RunManager" selected="JUnit.LinkedListTest.checkIfAddMethodPushesItem">
     <configuration name="LinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="linked-list" />
       <option name="PACKAGE_NAME" value="" />
@@ -255,60 +254,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.checkIfGetReturnsRightNode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedListTest.checkIfAddMethodPushesItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="linked-list" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedListTest" />
-      <option name="METHOD_NAME" value="checkIfGetReturnsRightNode" />
+      <option name="METHOD_NAME" value="checkIfAddMethodPushesItem" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.checkIfInsertedOnIndex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedListTest.checkIfAddThrowsNullPointerException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="linked-list" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedListTest" />
-      <option name="METHOD_NAME" value="checkIfInsertedOnIndex" />
+      <option name="METHOD_NAME" value="checkIfAddThrowsNullPointerException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedListTest.checkIfItemRemoved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedListTest.checkIfInsertPushWhenIndexHigherThanList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="linked-list" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LinkedListTest" />
-      <option name="METHOD_NAME" value="checkIfItemRemoved" />
+      <option name="METHOD_NAME" value="checkIfInsertPushWhenIndexHigherThanList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NodeTest.checkIfHasNextReturnsFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LinkedListTest.checkIfInsertThrowsNullPointerException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="linked-list" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="NodeTest" />
-      <option name="METHOD_NAME" value="checkIfHasNextReturnsFalse" />
+      <option name="MAIN_CLASS_NAME" value="LinkedListTest" />
+      <option name="METHOD_NAME" value="checkIfInsertThrowsNullPointerException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.NodeTest.checkIfHasNextReturnsFalse" />
-      <item itemvalue="JUnit.LinkedListTest.checkIfGetReturnsRightNode" />
       <item itemvalue="JUnit.LinkedListTest" />
-      <item itemvalue="JUnit.LinkedListTest.checkIfItemRemoved" />
-      <item itemvalue="JUnit.LinkedListTest.checkIfInsertedOnIndex" />
+      <item itemvalue="JUnit.LinkedListTest.checkIfAddThrowsNullPointerException" />
+      <item itemvalue="JUnit.LinkedListTest.checkIfInsertThrowsNullPointerException" />
+      <item itemvalue="JUnit.LinkedListTest.checkIfInsertPushWhenIndexHigherThanList" />
+      <item itemvalue="JUnit.LinkedListTest.checkIfAddMethodPushesItem" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LinkedListTest.checkIfAddMethodPushesItem" />
+        <item itemvalue="JUnit.LinkedListTest.checkIfInsertPushWhenIndexHigherThanList" />
+        <item itemvalue="JUnit.LinkedListTest.checkIfInsertThrowsNullPointerException" />
+        <item itemvalue="JUnit.LinkedListTest.checkIfAddThrowsNullPointerException" />
         <item itemvalue="JUnit.LinkedListTest" />
-        <item itemvalue="JUnit.LinkedListTest.checkIfInsertedOnIndex" />
-        <item itemvalue="JUnit.LinkedListTest.checkIfItemRemoved" />
-        <item itemvalue="JUnit.LinkedListTest.checkIfGetReturnsRightNode" />
-        <item itemvalue="JUnit.NodeTest.checkIfHasNextReturnsFalse" />
       </list>
     </recent_temporary>
   </component>
@@ -326,15 +325,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedListTest_checkIfInsertedOnIndex - 2019.02.12 at 10h 44m 33s.xml">
-      <configuration name="LinkedListTest.checkIfInsertedOnIndex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedListTest_checkIfInsertedOnIndex - 2019.02.12 at 10h 45m 21s.xml">
-      <configuration name="LinkedListTest.checkIfInsertedOnIndex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedListTest_checkIfInsertedOnIndex - 2019.02.12 at 10h 45m 26s.xml">
-      <configuration name="LinkedListTest.checkIfInsertedOnIndex" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedListTest_checkIfInsertedOnIndex - 2019.02.12 at 10h 46m 27s.xml">
       <configuration name="LinkedListTest.checkIfInsertedOnIndex" configurationId="JUnit" />
     </history-entry>
@@ -355,6 +345,15 @@
     </history-entry>
     <history-entry file="LinkedListTest - 2019.02.12 at 10h 57m 46s.xml">
       <configuration name="LinkedListTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_checkIfAddThrowsNullPointerException - 2019.02.12 at 11h 14m 19s.xml">
+      <configuration name="LinkedListTest.checkIfAddThrowsNullPointerException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_checkIfInsertThrowsNullPointerException - 2019.02.12 at 11h 15m 13s.xml">
+      <configuration name="LinkedListTest.checkIfInsertThrowsNullPointerException" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedListTest_checkIfInsertPushWhenIndexHigherThanList - 2019.02.12 at 11h 17m 25s.xml">
+      <configuration name="LinkedListTest.checkIfInsertPushWhenIndexHigherThanList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -405,14 +404,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/LinkedList.java</url>
-          <line>36</line>
-          <properties class="LinkedList" method="get">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/LinkedListTest.java</url>
           <line>7</line>
@@ -461,17 +452,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/LinkedListTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LinkedList.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/LinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="75" column="42" selection-start-line="75" selection-start-column="42" selection-end-line="75" selection-end-column="42" />
+        <state relative-caret-position="345">
+          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

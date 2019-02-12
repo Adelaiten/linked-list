@@ -1,15 +1,17 @@
 
-public class LinkedList<T> {
+class LinkedList<T> {
     private Node<T> firstNode;
     private Node<T> lastNode;
     private int listLength;
 
-    public LinkedList() {
+
+    LinkedList() {
         this.firstNode = null;
         this.listLength = 0;
     }
 
-    public void add(T value) {
+
+    void add(T value) {
 
         throwExceptionWhenValueNull(value);
 
@@ -21,20 +23,8 @@ public class LinkedList<T> {
         this.listLength++;
     }
 
-    private void pushNextNode(T value) {
-        Node nextNode = new Node<T>(value);
-        this.lastNode.setNextNode(nextNode);
 
-        this.lastNode = nextNode;
-    }
-
-    private void addWhenListEmpty(T value) {
-        this.firstNode = new Node<T>(value);
-        this.lastNode = this.firstNode;
-    }
-
-
-    public T get(int index) {
+    T get(int index) {
         throwExceptionWhenInvalidIndex(index);
         int FIRST_INDEX = 0;
         int LAST_INDEX = listLength - 1;
@@ -59,8 +49,7 @@ public class LinkedList<T> {
     }
 
 
-
-    public void remove(int index) {
+    void remove(int index) {
         throwExceptionWhenInvalidIndex(index);
         int FIRST_INDEX = 0;
         Node<T> tempNode = this.firstNode;
@@ -73,24 +62,8 @@ public class LinkedList<T> {
         listLength--;
     }
 
-    private void removeNode(int index, Node<T> tempNode) {
-        for(int i = 0; i < listLength; i++) {
-            if(i+1 == index) {
-                tempNode.removeNextNode();
-                break;
-            }
-            tempNode = tempNode.getNextNode();
-        }
-    }
 
-    private void removeFirstNode() {
-        Node<T> tempNode;
-        tempNode = this.firstNode.getNextNode();
-        this.firstNode = tempNode;
-    }
-
-
-    public void insert(int index, T value) {
+    void insert(int index, T value) {
         throwExceptionWhenValueNull((T) value);
 
         Node<T> node = new Node<>(value);
@@ -103,11 +76,45 @@ public class LinkedList<T> {
         insertionLoop(index, node, tempNode);
     }
 
+
+    private void pushNextNode(T value) {
+        Node nextNode = new Node<T>(value);
+        this.lastNode.setNextNode(nextNode);
+
+        this.lastNode = nextNode;
+    }
+
+
+    private void addWhenListEmpty(T value) {
+        this.firstNode = new Node<T>(value);
+        this.lastNode = this.firstNode;
+    }
+
+
+    private void removeNode(int index, Node<T> tempNode) {
+        for(int i = 0; i < listLength; i++) {
+            if(i+1 == index) {
+                tempNode.removeNextNode();
+                break;
+            }
+            tempNode = tempNode.getNextNode();
+        }
+    }
+
+
+    private void removeFirstNode() {
+        Node<T> tempNode;
+        tempNode = this.firstNode.getNextNode();
+        this.firstNode = tempNode;
+    }
+
+
     private void throwExceptionWhenValueNull(T value) {
         if (value == null) {
             throw new NullPointerException();
         }
     }
+
 
     private void insertionLoop(int index, Node<T> node, Node tempNode) {
         for(int i = 0; i < listLength; i++) {
@@ -116,7 +123,6 @@ public class LinkedList<T> {
                 node.setNextNode(indexNode);
 
                 tempNode.setNextNode(node);
-//                System.out.println(tempNode.getNextNode().getNextNode().getNextNode().getNextNode().getValue());
                 listLength++;
                 break;
             }
@@ -124,17 +130,20 @@ public class LinkedList<T> {
         }
     }
 
+
     private void throwErrorWhenLowerThanZero(int index) {
         if (index < 0) {
             throw new IndexOutOfBoundsException();
         }
     }
 
+
     private void addWhenIndexHigher(int index, T value) {
         if(index >= (listLength)) {
             add(value);
         }
     }
+
 
     private void throwExceptionWhenInvalidIndex(int index) {
         if (index >= listLength || index < 0) {

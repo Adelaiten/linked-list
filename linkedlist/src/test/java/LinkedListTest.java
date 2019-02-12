@@ -5,7 +5,23 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class LinkedListTest {
+class LinkedListTest {
+
+    @Test
+    void checkIfAddThrowsNullPointerException() {
+        LinkedList<String> linkedList = new LinkedList<>();
+        assertThrows(NullPointerException.class, () -> linkedList.add(null));
+    }
+
+    @Test
+    void checkIfAddMethodPushesItem() {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(4);
+        linkedList.add(5);
+        assertAll(
+                () -> assertEquals(4,linkedList.get(0)),
+                () -> assertEquals(5,linkedList.get(1)))  ;
+    }
 
     @Test
     void checkIfGetReturnsRightNode() {
@@ -24,7 +40,7 @@ public class LinkedListTest {
     }
 
     @Test
-    void checkIfThrowsExceptionWhenIndexHigherThanListLength() {
+    void checkIfGetThrowsExceptionWhenIndexHigherThanListLength() {
         LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.add(2);
         linkedList.add(3);
@@ -35,7 +51,7 @@ public class LinkedListTest {
     }
 
     @Test
-    void checkIfThrowsExceptionWhenIndexLowerThanZero() {
+    void checkIfGetThrowsExceptionWhenIndexLowerThanZero() {
         LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.add(2);
         linkedList.add(3);
@@ -61,7 +77,6 @@ public class LinkedListTest {
     }
 
     @Test
-
     void checkIfInsertedOnIndex() {
         LinkedList<Integer> linkedList = new LinkedList<>();
         linkedList.add(2);//0
@@ -82,4 +97,23 @@ public class LinkedListTest {
                 () -> assertEquals(7, linkedList.get(7))
                 );
     }
+
+    @Test
+    void checkIfInsertPushWhenIndexHigherThanList() {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(2);//0
+        linkedList.add(3);//1
+        linkedList.insert(10, 5);
+        assertEquals(5, linkedList.get(2));
+    }
+
+    @Test
+    void checkIfInsertThrowsNullPointerException() {
+        LinkedList<String> linkedList = new LinkedList<>();
+        assertThrows(NullPointerException.class, () -> linkedList.insert(1, null));
+    }
+
+
+
+
 }
